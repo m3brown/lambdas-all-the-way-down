@@ -1,10 +1,9 @@
 # Lambdas All The Way Down
 
-This is a sample app that makes a word cloud of animal baby names (kitten, puppy, etc.)
+A sample web app that makes a word cloud of animal baby names (kitten, pup, etc.)
 
-The purpose is to provide a couple examples of Python's lambda functions in action.
-
-The instructions below also provide guidance on deploying to Amazon's Lambda service.
+- The web app implements a couple examples of Python's lambda functions.
+- The instructions also provide guidance on deploying to Amazon's Lambda service.
 
 #### Technology stack
 - Python (2 or 3 will work, 2.7 or 3.6 required for AWS Lambda)
@@ -32,8 +31,8 @@ Open the following URL to see the default page: http://localhost:5000/
 
 The app also accepts overrides for preferred animal name and suffx:
 
-http://localhost:5000/polliwog
-http://localhost:5000/cub/scout
+- http://localhost:5000/polliwog
+- http://localhost:5000/cub/scout
 
 ## Deploying to AWS Lambda
 
@@ -47,7 +46,7 @@ aws_access_key_id = your-access-key-here
 aws_secret_access_key = your-secret-access-key-here
 ```
 
-Next, you'll want to install the [Zappa|https://github.com/Miserlou/Zappa] python library.
+Next, you'll want to install the [Zappa](https://github.com/Miserlou/Zappa) python library.
 
 ```shell
 pip install zappa
