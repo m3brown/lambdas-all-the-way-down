@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html> 
+<head>
+    <meta charset="UTF-8">
+    <title>Baby Animal Word Cloud</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqcloud/1.0.4/jqcloud.css">
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqcloud/1.0.4/jqcloud-1.0.4.min.js"></script>
+
+    <style>
+	    h1 {
+            color: #333333;
+			text-align: center;
+			font-family: Helvetica, Arial, sans-serif;
+			margin: 1em 0 0 0;
+		}
+
+		#word_cloud {
+			width: 100%;
+			height: 600px;
+        }
+	</style>
+
+    <script type="text/javascript">
+	    var words_data = {{ words | tojson }};
+		$(document).ready(function () {
+           $('#word_cloud').jQCloud(words_data);
+       });
+	</script>
+</head>
+
+<body>
+    <h1>Baby Animal Names ... {{ suffix }}</h1>
+    <div id="word_cloud">
+    </div>
+</body>
+</html>
